@@ -5,6 +5,8 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^4.0.0",
     "ejs": "2.3.4",
     "express-validation": "^1.0.2",
     "grunt": "1.0.1",
@@ -21,6 +23,10 @@
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
     "joi": "^10.6.0",
+    "jsonwebtoken": "^7.4.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "passport-local": "^1.0.0",
     "rc": "1.0.1",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
@@ -28,7 +34,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "start:watch": "nodemon app.js"
   },
   "main": "app.js",
   "repository": {

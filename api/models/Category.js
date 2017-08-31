@@ -13,6 +13,11 @@ module.exports = {
       unique: true,
       required: true
     },
+    user: {
+      model: 'user',
+      columnName: 'user_id',
+      required: true
+    },
     post: {
       collection: 'post',
       via: 'category'

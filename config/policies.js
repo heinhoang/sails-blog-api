@@ -16,7 +16,6 @@
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.policies.html
  */
 
-
 module.exports.policies = {
 
   /***************************************************************************
@@ -51,5 +50,19 @@ module.exports.policies = {
   UserController: {
     '*': false,
     create: 'RegisterValidation'
+  },
+  PostController: {
+    '*': true,
+    create: 'jwtAuthenticated',
+    update: 'jwtAuthenticated',
+    delete: 'jwtAuthenticated',
+    deleteAll: 'jwtAuthenticated'
+  },
+  CategoryController: {
+    '*': true,
+    create: 'jwtAuthenticated',
+    update: 'jwtAuthenticated',
+    delete: 'jwtAuthenticated',
+    deleteAll: 'jwtAuthenticated'
   }
 };

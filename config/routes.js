@@ -45,12 +45,22 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  'POST /user': 'UserController.create',
+  'POST /api/v1/register': 'UserController.create',
+  'POST /api/v1/login': 'AuthController.login',
+  'POST /api/v1/logout': 'AuthController.logout',
 
-  // 'POST /post': 'PostController.create',
-  // 'GET /posts': 'PostController.findAll',
-  // 'GET /posts/:id': 'PostController.findOne',
-  // 'DELETE /posts/:id': 'PostController.delete',
-  // 'PUT /posts/:id': 'PostController.update'
+  'POST /api/v1/posts': 'PostController.create',
+  'GET /api/v1/posts': 'PostController.findAll',
+  'GET /api/v1/posts/:id': 'PostController.findOne',
+  'DELETE /api/v1/posts': 'PostController.deleteAll',
+  'DELETE /api/v1/posts/:id': 'PostController.delete',
+  'PUT /api/v1/posts/:id': 'PostController.update',
+
+  'POST /api/v1/categories': 'CategoryController.create',
+  'GET /api/v1/categories': 'CategoryController.findAll',
+  'GET /api/v1/categories/:id': 'CategoryController.findOne',
+  'DELETE /api/v1/categories': 'CategoryController.deleteAll',
+  'DELETE /api/v1/categories/:id': 'CategoryController.delete',
+  'PUT /api/v1/categories/:id': 'CategoryController.update'
 
 };

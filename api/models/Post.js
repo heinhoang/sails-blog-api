@@ -16,10 +16,15 @@ module.exports = {
       type: 'longtext',
       required: true
     },
+    // category: {
+    //   model: 'category',
+    //   columnName: 'category_id',
+    //   required: true
+    // },
     category: {
-      model: 'category',
-      columnName: 'category_id',
-      required: true
+      collection: 'category',
+      via: 'post',
+      dominant: true
     },
     user: {
       model: 'user',

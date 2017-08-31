@@ -16,7 +16,15 @@
     "async": true,
     "server": true,
     "User": true,
-    "UserService": true
+    "UserService": true,
+    "AuthController": true,
+    "CategoryController": true,
+    "PostController": true,
+    "UserController": true,
+    "Category": true,
+    "Post": true,
+    "ValidationSchema": true,
+    "jwtToken": true
   },
   "extends": [
     "eslint:recommended",
@@ -25,11 +33,11 @@
   ],
   "rules": {
     "no-unused-vars": "warn",
-    "no-console": "warn",
     "indent": [
       "warn",
       2
     ],
+    "no-console": 0,
     "linebreak-style": [
       "warn",
       "unix"

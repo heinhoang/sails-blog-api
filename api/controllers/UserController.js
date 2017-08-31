@@ -6,21 +6,21 @@
  */
 
 module.exports = {
-    create: function (req, res) {
-        const { firstName, lastName, userName, password, email } = req.params;
+  create: function (req, res) {
+    const { firstName, lastName, userName, password, email } = req.body;
 
-        User.create({
-            firstName,
-            lastName,
-            userName,
-            password,
-            email
-        })
-            .then((user) => {
-                if (!user) return res.serverError('Unable to create user');
-                return res.ok(user);
-            })
-            .catch(e => res.serverError(e.message));
-    }
+    User.create({
+      firstName,
+      lastName,
+      userName,
+      password,
+      email
+    })
+      .then((user) => {
+        if (!user) return res.serverError({ message: 'Unable to create user' });
+        return res.ok(user);
+      })
+      .catch(e => res.serverError({ message: 'Unable to create user', error: e.message }));
+  }
 };
 
